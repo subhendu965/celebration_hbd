@@ -1,0 +1,18 @@
+ErrorDocument 404 /hbd/lost.html
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^create createhbd.php
+
+RewriteRule ^([a-zA-Z0-9-_]+)$ show.php?bd_id=$1 
+
+RewriteRule ^([a-zA-Z0-9-_]+)/wish/([1-9]+) compose.php?bd_id=$1&priority=$2
+
+RewriteRule ^([a-zA-Z0-9-_]+)/wish compose.php?bd_id=$1
+
+
+RewriteRule ^([a-zA-Z0-9-_]+)/view test.php?bd_id=$1
