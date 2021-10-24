@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 24, 2021 at 04:08 PM
+-- Generation Time: Oct 24, 2021 at 05:38 PM
 -- Server version: 10.3.31-MariaDB-cll-lve
 -- PHP Version: 7.3.30
 
@@ -37,18 +37,19 @@ CREATE TABLE `bd_event` (
   `gender` enum('male','female','other') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `bday` datetime NOT NULL,
   `country` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `organizer` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `organizer` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `year` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `bd_event`
 --
 
-INSERT INTO `bd_event` (`bd_id`, `first_name`, `middle_name`, `last_name`, `display_name`, `gender`, `bday`, `country`, `organizer`) VALUES
-('DOOP', NULL, NULL, NULL, 'Hanuman', 'male', '2020-11-17 00:00:00', 'india', 'riverslide'),
-('JAYEETA', 'Jayeeta', NULL, 'Saha', 'Jayeeta', 'female', '2020-10-13 00:00:00', 'india', 'RIVERSLIDE'),
-('RITABRATA', 'Ritabrata', NULL, 'Bhattacharya', 'Ritabrata', 'male', '2020-12-20 00:00:00', 'India', 'RIVERSLIDE'),
-('RUCHI', 'Ruchismita', NULL, 'Das', 'Ruchi', 'female', '2020-11-16 00:00:00', 'india', 'RIVERSLIDE');
+INSERT INTO `bd_event` (`bd_id`, `first_name`, `middle_name`, `last_name`, `display_name`, `gender`, `bday`, `country`, `organizer`, `year`) VALUES
+('DOOP', NULL, NULL, NULL, 'Hanuman', 'male', '2020-11-17 00:00:00', 'india', 'riverslide', 0),
+('JAYEETA', 'Jayeeta', NULL, 'Saha', 'Jayeeta', 'female', '2020-10-13 00:00:00', 'india', 'RIVERSLIDE', 0),
+('RITABRATA', 'Ritabrata', NULL, 'Bhattacharya', 'Ritabrata', 'male', '2020-12-20 00:00:00', 'India', 'RIVERSLIDE', 0),
+('RUCHI', 'Ruchismita', NULL, 'Das', 'Ruchi', 'female', '2020-11-16 00:00:00', 'india', 'RIVERSLIDE', 0);
 
 -- --------------------------------------------------------
 
